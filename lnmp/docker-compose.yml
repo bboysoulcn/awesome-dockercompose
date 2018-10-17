@@ -1,0 +1,48 @@
+# author: bboysoul
+# website: www.bboysoul.com
+version: "3"
+services: 
+  nginx:
+    container_name: nginx
+    hostname: nginx
+    image: "nginx:1.14.0-alpine"
+    ports: 
+      - "80:80"
+    volumes: 
+      - "./nginx/wwwroot/:/var/www/html:rw"
+      - "./nginx/etc/nginx.conf:/etc/nginx/nginx.conf:rw"
+      - "./nginx/etc/conf.d/:/etc/nginx/conf.d/:rw"
+      - "./nginx/wwwlogs/:/var/log/nginx/:rw"
+    depends_on: 
+      - "php"
+      - "mysql"
+    restart: "always"
+  
+  php:
+    container_name: php
+    hostname: php
+    image: "php:7.2-fpm"
+    # ports: 
+    #   - "9000:9000"
+    depends_on: 
+      - "mysql"
+    volumes: 
+      - "./nginx/wwwroot/:/var/www/html/:rw"
+      - "./php/etc/:/usr/local/etc/:rw"
+    restart: "always"
+  
+  mysql:
+    image: "mysql:5.6"
+    container_name: "mysql"
+    hostname: "mysql"
+    restart: "always"
+    # ports: 
+    #   - "3306:3306"
+    environment: 
+      - "MYSQL_ROOT_PASSWORD=woyaoxuehuilinux"
+      # - "MYSQL_DATABASE="
+      # - "MYSQL_USER="
+      # - "MYSQL_PASSWORD="
+    volumes: 
+    - "./mysql/data/:/var/lib/mysql/:rw"
+    - "./mysql/etc/:/etc/mysql/:rw"
