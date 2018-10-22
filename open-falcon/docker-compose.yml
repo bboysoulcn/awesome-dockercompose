@@ -1,0 +1,71 @@
+# docker exec falcon-plus sh ctrl.sh start graph hbs judge transfer nodata aggregator agent gateway api alarm
+version: "3"
+services: 
+  falcon-plus:
+    container_name: "falcon-plus"
+    image: "openfalcon/falcon-plus:v0.2.1"
+    hostname: "falcon-plus"
+    depends_on: 
+      - "mysql"
+      - "redis"
+    ports: 
+      - "8433:8433"
+      - "8080:8080"
+    environment: 
+      - "MYSQL_PORT=root:woyaoxuehuilinux@tcp(mysql:3306)"
+      - "REDIS_PORT=redis:6379"
+    volumes: 
+      - "./open-falcon/data/:/open-falcon/data/:rw"
+      - "./open-falcon/logs/:/open-falcon/logs/:rw"
+    restart: "always"
+
+  falcon-dashboard:
+    container_name: "falcon-dashboard"
+    image: "openfalcon/falcon-dashboard:v0.2.1"
+    hostname: "falcon-dashboard"
+    depends_on: 
+      - "mysql"
+      - "falcon-plus"
+      - "redis"
+    ports: 
+      - "8081:8081"
+    environment: 
+      - "API_ADDR=http://falcon-plus:8080/api/v1"
+      - "PORTAL_DB_HOST=mysql"
+      - "PORTAL_DB_PORT=3306"
+      - "PORTAL_DB_USER=root"
+      - "PORTAL_DB_PASS=woyaoxuehuilinux"
+      - "PORTAL_DB_NAME=falcon_portal"
+      - "ALARM_DB_HOST=mysql"
+      - "ALARM_DB_PORT=3306"
+      - "ALARM_DB_USER=root"
+      - "ALARM_DB_PASS=woyaoxuehuilinux"
+      - "ALARM_DB_NAME=alarms"
+    working_dir: "/open-falcon/dashboard"
+    command: ["./control startfg"]
+    restart: "always"
+  
+  mysql:
+    container_name: "mysql"
+    image: "mysql:5.7"
+    hostname: "mysql"
+    ports: 
+      - "3306:3306"
+    environment: 
+      - "MYSQL_ROOT_PASSWORD=woyaoxuehuilinux"
+    volumes: 
+      - "./mysql/data/:/var/lib/mysql/:rw"
+      - "./mysql/etc/:/etc/mysql/:rw"
+      - "./mysql/db_schema/:/docker-entrypoint-initdb.d/:rw"
+    restart: "always"
+
+  redis:
+    container_name: "redis"
+    image: "redis:4.0"
+    hostname: "redis"
+    ports: 
+      - "6379:6379"
+    # volumes: 
+    #   - "./redis/data/:/data/:rw"
+    #   - "./redis/conf/:/usr/local/etc/redis/:rw"
+    restart: "always"

@@ -1,0 +1,77 @@
+
+
+[35m(/go/src/github.com/open-falcon/falcon-plus/modules/api/app/controller/uic/session_controller.go:45)[0m 
+[33m[2018-10-19 01:38:51][0m  [36;1m[27.81ms][0m  SELECT * FROM `user`  WHERE (`user`.`name` = 'test')
+[GIN] 2018/10/19 - 01:38:51 | 400 [0m|     28.4539ms | 172.19.0.5 |  [0m POST    /api/v1/user/login
+
+[35m(/go/src/github.com/open-falcon/falcon-plus/modules/api/app/controller/uic/session_controller.go:45)[0m 
+[33m[2018-10-19 01:38:57][0m  [36;1m[1.35ms][0m  SELECT * FROM `user`  WHERE (`user`.`name` = 'test')
+[GIN] 2018/10/19 - 01:38:57 | 400 [0m|      1.6975ms | 172.19.0.5 |  [0m POST    /api/v1/user/login
+
+[35m(/go/src/github.com/open-falcon/falcon-plus/modules/api/app/controller/uic/session_controller.go:45)[0m 
+[33m[2018-10-19 01:38:58][0m  [36;1m[1.57ms][0m  SELECT * FROM `user`  WHERE (`user`.`name` = 'test')
+[GIN] 2018/10/19 - 01:38:58 | 400 [0m|      2.1792ms | 172.19.0.5 |  [0m POST    /api/v1/user/login
+
+[35m(/go/src/github.com/open-falcon/falcon-plus/modules/api/app/controller/uic/user_controller.go:73)[0m 
+[33m[2018-10-19 01:39:45][0m  [36;1m[0.97ms][0m  SELECT * FROM `user`  WHERE (name = 'root')
+
+[35m(/go/src/github.com/open-falcon/falcon-plus/modules/api/app/controller/uic/user_controller.go:94)[0m 
+[33m[2018-10-19 01:39:45][0m  [36;1m[0.67ms][0m  INSERT INTO `user` (`name`,`cnname`,`passwd`,`email`,`phone`,`im`,`qq`,`role`) VALUES ('root','root','63a9f0ea7bb98050796b649e85481845','bboysoulcn@gmail.com','','','','2')
+
+[35m(/go/src/github.com/open-falcon/falcon-plus/modules/api/app/controller/uic/user_controller.go:102)[0m 
+[33m[2018-10-19 01:39:45][0m  [36;1m[24.08ms][0m  SELECT * FROM `session`  WHERE (uid = '1')
+
+[35m(/go/src/github.com/open-falcon/falcon-plus/modules/api/app/controller/uic/user_controller.go:110)[0m 
+[33m[2018-10-19 01:39:45][0m  [36;1m[3.12ms][0m  INSERT INTO `session` (`uid`,`sig`,`expired`) VALUES ('1','db685229d33f11e8aeda0242ac130004','1542505185')
+[GIN] 2018/10/19 - 01:39:45 | 200 [0m|     36.3018ms | 172.19.0.5 |  [0m POST    /api/v1/user/create
+
+[35m(/go/src/github.com/open-falcon/falcon-plus/modules/api/app/controller/uic/session_controller.go:45)[0m 
+[33m[2018-10-19 01:39:51][0m  [36;1m[1.18ms][0m  SELECT * FROM `user`  WHERE (`user`.`name` = 'root')
+
+[35m(/go/src/github.com/open-falcon/falcon-plus/modules/api/app/controller/uic/session_controller.go:56)[0m 
+[33m[2018-10-19 01:39:51][0m  [36;1m[1.02ms][0m  SELECT * FROM `session`  WHERE (uid = '1')
+[GIN] 2018/10/19 - 01:39:51 | 200 [0m|      2.9113ms | 172.19.0.5 |  [0m POST    /api/v1/user/login
+
+[35m(/go/src/github.com/open-falcon/falcon-plus/modules/api/app/helper/session.go:84)[0m 
+[33m[2018-10-19 01:39:52][0m  [36;1m[2.85ms][0m  SELECT * FROM `user`  WHERE (name = 'root')
+
+[35m(/go/src/github.com/open-falcon/falcon-plus/modules/api/app/helper/session.go:90)[0m 
+[33m[2018-10-19 01:39:52][0m  [36;1m[3.67ms][0m  SELECT * FROM `session`  WHERE (sig = 'db685229d33f11e8aeda0242ac130004' and uid = '1')
+
+[35m(/go/src/github.com/open-falcon/falcon-plus/modules/api/app/helper/session.go:110)[0m 
+[33m[2018-10-19 01:39:52][0m  [36;1m[1.91ms][0m  SELECT * FROM `user`  WHERE (`user`.`name` = 'root')
+[GIN] 2018/10/19 - 01:39:52 | 200 [0m|     10.7015ms | 172.19.0.5 |  [0m GET     /api/v1/user/current
+
+[35m(/go/src/github.com/open-falcon/falcon-plus/modules/api/app/helper/session.go:84)[0m 
+[33m[2018-10-19 01:39:52][0m  [36;1m[1.44ms][0m  SELECT * FROM `user`  WHERE (name = 'root')
+
+[35m(/go/src/github.com/open-falcon/falcon-plus/modules/api/app/helper/session.go:90)[0m 
+[33m[2018-10-19 01:39:52][0m  [36;1m[1.68ms][0m  SELECT * FROM `session`  WHERE (sig = 'db685229d33f11e8aeda0242ac130004' and uid = '1')
+
+[35m(/go/src/github.com/open-falcon/falcon-plus/modules/api/app/helper/session.go:110)[0m 
+[33m[2018-10-19 01:39:52][0m  [36;1m[3.28ms][0m  SELECT * FROM `user`  WHERE (`user`.`name` = 'root')
+[GIN] 2018/10/19 - 01:39:52 | 200 [0m|      7.5745ms | 172.19.0.5 |  [0m GET     /api/v1/user/current
+
+[35m(/go/src/github.com/open-falcon/falcon-plus/modules/api/app/helper/session.go:84)[0m 
+[33m[2018-10-19 01:39:52][0m  [36;1m[12.12ms][0m  SELECT * FROM `user`  WHERE (name = 'root')
+
+[35m(/go/src/github.com/open-falcon/falcon-plus/modules/api/app/helper/session.go:90)[0m 
+[33m[2018-10-19 01:39:53][0m  [36;1m[2.00ms][0m  SELECT * FROM `session`  WHERE (sig = 'db685229d33f11e8aeda0242ac130004' and uid = '1')
+
+[35m(/go/src/github.com/open-falcon/falcon-plus/modules/api/app/helper/session.go:110)[0m 
+[33m[2018-10-19 01:39:53][0m  [36;1m[2.45ms][0m  SELECT * FROM `user`  WHERE (`user`.`name` = 'root')
+[GIN] 2018/10/19 - 01:39:53 | 200 [0m|     18.2722ms | 172.19.0.5 |  [0m GET     /api/v1/user/current
+[GIN] 2018/10/22 - 07:02:01 | 200 [0m|         731µs | 172.19.0.1 |  [0m GET     /
+[GIN] 2018/10/22 - 07:02:01 | 404 [0m|        30.8µs | 172.19.0.1 |  [0m GET     /favicon.ico
+
+[35m(/go/src/github.com/open-falcon/falcon-plus/modules/api/app/controller/uic/session_controller.go:45)[0m 
+[33m[2018-10-22 07:02:15][0m  [36;1m[25.01ms][0m  SELECT * FROM `user`  WHERE (`user`.`name` = 'admin')
+[GIN] 2018/10/22 - 07:02:15 | 400 [0m|      25.728ms | 172.19.0.5 |  [0m POST    /api/v1/user/login
+
+[35m(/go/src/github.com/open-falcon/falcon-plus/modules/api/app/controller/uic/session_controller.go:45)[0m 
+[33m[2018-10-22 07:02:22][0m  [36;1m[1.35ms][0m  SELECT * FROM `user`  WHERE (`user`.`name` = 'root')
+[GIN] 2018/10/22 - 07:02:22 | 400 [0m|      1.6685ms | 172.19.0.5 |  [0m POST    /api/v1/user/login
+
+[35m(/go/src/github.com/open-falcon/falcon-plus/modules/api/app/controller/uic/session_controller.go:45)[0m 
+[33m[2018-10-22 07:02:29][0m  [36;1m[1.13ms][0m  SELECT * FROM `user`  WHERE (`user`.`name` = 'root')
+[GIN] 2018/10/22 - 07:02:29 | 400 [0m|      1.5157ms | 172.19.0.5 |  [0m POST    /api/v1/user/login

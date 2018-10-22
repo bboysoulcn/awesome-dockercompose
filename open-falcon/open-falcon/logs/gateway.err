@@ -1,0 +1,15 @@
+2018/10/18 14:55:25 cfg.go:101: g.ParseConfig ok, file  /open-falcon/gateway/config/cfg.json
+2018/10/18 14:55:25 sender.go:47: send.Start, ok
+2018/10/18 14:55:25 http.go:54: http.startHttpServer ok, listening 0.0.0.0:16060
+2018/10/18 14:55:25 rpc.go:41: rpc listening 0.0.0.0:18433
+2018/10/18 14:55:25 socket.go:39: socket listening 0.0.0.0:14444
+2018/10/19 01:38:43 cfg.go:101: g.ParseConfig ok, file  /open-falcon/gateway/config/cfg.json
+2018/10/19 01:38:43 sender.go:47: send.Start, ok
+2018/10/19 01:38:43 http.go:54: http.startHttpServer ok, listening 0.0.0.0:16060
+2018/10/19 01:38:43 rpc.go:41: rpc listening 0.0.0.0:18433
+2018/10/19 01:38:43 socket.go:39: socket listening 0.0.0.0:14444
+2018/10/22 07:00:31 cfg.go:101: g.ParseConfig ok, file  /open-falcon/gateway/config/cfg.json
+2018/10/22 07:00:31 sender.go:47: send.Start, ok
+2018/10/22 07:00:31 http.go:54: http.startHttpServer ok, listening 0.0.0.0:16060
+2018/10/22 07:00:31 socket.go:39: socket listening 0.0.0.0:14444
+2018/10/22 07:00:31 rpc.go:41: rpc listening 0.0.0.0:18433
