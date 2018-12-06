@@ -1,0 +1,9 @@
+version: "3"
+services: 
+  puretftpd:
+    image: "stilliard/pure-ftpd:hardened"
+    container_name: "pure-ftpd"
+    ports: 
+      - "21:21"
+      - "30000-30009:30000-30009"
+      

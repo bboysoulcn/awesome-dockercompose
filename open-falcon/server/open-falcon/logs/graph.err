@@ -1,0 +1,82 @@
+2018/10/18 14:55:18 debug.go:45: [GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+2018/10/18 14:55:18 debug.go:45: [GIN-debug] GET    /health                   --> github.com/open-falcon/falcon-plus/modules/graph/http.configCommonRoutes.func1 (3 handlers)
+2018/10/18 14:55:18 debug.go:45: [GIN-debug] GET    /api/v2/health            --> github.com/open-falcon/falcon-plus/modules/graph/http.configCommonRoutes.func2 (3 handlers)
+2018/10/18 14:55:18 debug.go:45: [GIN-debug] GET    /api/v2/version           --> github.com/open-falcon/falcon-plus/modules/graph/http.configCommonRoutes.func3 (3 handlers)
+2018/10/18 14:55:18 debug.go:45: [GIN-debug] GET    /api/v2/workdir           --> github.com/open-falcon/falcon-plus/modules/graph/http.configCommonRoutes.func4 (3 handlers)
+2018/10/18 14:55:18 debug.go:45: [GIN-debug] GET    /api/v2/config            --> github.com/open-falcon/falcon-plus/modules/graph/http.configCommonRoutes.func5 (3 handlers)
+2018/10/18 14:55:18 debug.go:45: [GIN-debug] POST   /api/v2/config/reload     --> github.com/open-falcon/falcon-plus/modules/graph/http.configCommonRoutes.func6 (3 handlers)
+2018/10/18 14:55:18 debug.go:45: [GIN-debug] GET    /api/v2/stats/graph-queue-size --> github.com/open-falcon/falcon-plus/modules/graph/http.configCommonRoutes.func7 (3 handlers)
+2018/10/18 14:55:18 debug.go:45: [GIN-debug] GET    /counter/all              --> github.com/open-falcon/falcon-plus/modules/graph/http.configProcRoutes.func1 (3 handlers)
+2018/10/18 14:55:18 debug.go:45: [GIN-debug] GET    /statistics/all           --> github.com/open-falcon/falcon-plus/modules/graph/http.configProcRoutes.func2 (3 handlers)
+2018/10/18 14:55:18 debug.go:45: [GIN-debug] GET    /index/updateAll          --> github.com/open-falcon/falcon-plus/modules/graph/http.configIndexRoutes.func1 (3 handlers)
+2018/10/18 14:55:18 debug.go:45: [GIN-debug] GET    /index/updateAll/concurrent --> github.com/open-falcon/falcon-plus/modules/graph/http.configIndexRoutes.func2 (3 handlers)
+2018/10/18 14:55:18 debug.go:45: [GIN-debug] POST   /api/v2/index             --> github.com/open-falcon/falcon-plus/modules/graph/http.configIndexRoutes.func3 (3 handlers)
+2018/10/18 14:55:18 cfg.go:115: g.ParseConfig ok, file /open-falcon/graph/config/cfg.json
+2018/10/18 14:55:18 db.go:40: g.InitDB ok
+2018/10/18 14:55:18 rrdtool.go:69: rrdtool.Start ok
+2018/10/18 14:55:18 main.go:37: 60 register signal notify
+2018/10/18 14:55:18 rpc.go:68: rpc.Start ok, listening on 0.0.0.0:6070
+2018/10/18 15:05:01 main.go:42: recv terminated
+2018/10/18 15:05:01 main.go:46: graceful shut down
+time="2018-10-18T15:05:01Z" level=info msg="http recv sigout and exit..." 
+2018/10/18 15:05:01 main.go:51: http stop ok
+2018/10/18 15:05:01 rpc.go:100: rpc, recv sigout and exiting...
+2018/10/18 15:05:01 main.go:57: rpc stop ok
+2018/10/18 15:05:01 rrdtool.go:240: flush hash idx:000 size:1800 disk:00000000 net:00000000
+2018/10/18 15:05:01 rrdtool.go:240: flush hash idx:180 size:1800 disk:00000012 net:00000000
+2018/10/18 15:05:01 rrdtool.go:240: flush hash idx:360 size:1800 disk:00000019 net:00000000
+2018/10/18 15:05:01 rrdtool.go:240: flush hash idx:540 size:1800 disk:00000026 net:00000000
+2018/10/18 15:05:01 rrdtool.go:240: flush hash idx:720 size:1800 disk:00000038 net:00000000
+2018/10/18 15:05:01 rrdtool.go:240: flush hash idx:900 size:1800 disk:00000056 net:00000000
+2018/10/18 15:05:01 rrdtool.go:240: flush hash idx:1080 size:1800 disk:00000068 net:00000000
+2018/10/18 15:05:01 rrdtool.go:240: flush hash idx:1260 size:1800 disk:00000075 net:00000000
+2018/10/18 15:05:01 rrdtool.go:240: flush hash idx:1440 size:1800 disk:00000085 net:00000000
+2018/10/18 15:05:01 rrdtool.go:240: flush hash idx:1620 size:1800 disk:00000094 net:00000000
+2018/10/18 15:05:02 rrdtool.go:244: flush hash done (disk:00000107 net:00000000)
+2018/10/18 15:05:02 main.go:61: rrdtool stop ok
+2018/10/18 15:05:02 main.go:63: 60 exit
+2018/10/19 01:38:34 debug.go:45: [GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+2018/10/19 01:38:34 debug.go:45: [GIN-debug] GET    /health                   --> github.com/open-falcon/falcon-plus/modules/graph/http.configCommonRoutes.func1 (3 handlers)
+2018/10/19 01:38:34 debug.go:45: [GIN-debug] GET    /api/v2/health            --> github.com/open-falcon/falcon-plus/modules/graph/http.configCommonRoutes.func2 (3 handlers)
+2018/10/19 01:38:34 debug.go:45: [GIN-debug] GET    /api/v2/version           --> github.com/open-falcon/falcon-plus/modules/graph/http.configCommonRoutes.func3 (3 handlers)
+2018/10/19 01:38:34 debug.go:45: [GIN-debug] GET    /api/v2/workdir           --> github.com/open-falcon/falcon-plus/modules/graph/http.configCommonRoutes.func4 (3 handlers)
+2018/10/19 01:38:34 debug.go:45: [GIN-debug] GET    /api/v2/config            --> github.com/open-falcon/falcon-plus/modules/graph/http.configCommonRoutes.func5 (3 handlers)
+2018/10/19 01:38:34 debug.go:45: [GIN-debug] POST   /api/v2/config/reload     --> github.com/open-falcon/falcon-plus/modules/graph/http.configCommonRoutes.func6 (3 handlers)
+2018/10/19 01:38:34 debug.go:45: [GIN-debug] GET    /api/v2/stats/graph-queue-size --> github.com/open-falcon/falcon-plus/modules/graph/http.configCommonRoutes.func7 (3 handlers)
+2018/10/19 01:38:34 debug.go:45: [GIN-debug] GET    /counter/all              --> github.com/open-falcon/falcon-plus/modules/graph/http.configProcRoutes.func1 (3 handlers)
+2018/10/19 01:38:34 debug.go:45: [GIN-debug] GET    /statistics/all           --> github.com/open-falcon/falcon-plus/modules/graph/http.configProcRoutes.func2 (3 handlers)
+2018/10/19 01:38:34 debug.go:45: [GIN-debug] GET    /index/updateAll          --> github.com/open-falcon/falcon-plus/modules/graph/http.configIndexRoutes.func1 (3 handlers)
+2018/10/19 01:38:34 debug.go:45: [GIN-debug] GET    /index/updateAll/concurrent --> github.com/open-falcon/falcon-plus/modules/graph/http.configIndexRoutes.func2 (3 handlers)
+2018/10/19 01:38:34 debug.go:45: [GIN-debug] POST   /api/v2/index             --> github.com/open-falcon/falcon-plus/modules/graph/http.configIndexRoutes.func3 (3 handlers)
+2018/10/19 01:38:34 cfg.go:115: g.ParseConfig ok, file /open-falcon/graph/config/cfg.json
+2018/10/19 01:38:34 db.go:40: g.InitDB ok
+2018/10/19 01:38:34 rrdtool.go:69: rrdtool.Start ok
+2018/10/19 01:38:34 main.go:37: 41 register signal notify
+2018/10/19 01:38:34 rpc.go:68: rpc.Start ok, listening on 0.0.0.0:6070
+2018/10/22 07:00:23 debug.go:45: [GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+2018/10/22 07:00:23 debug.go:45: [GIN-debug] GET    /health                   --> github.com/open-falcon/falcon-plus/modules/graph/http.configCommonRoutes.func1 (3 handlers)
+2018/10/22 07:00:23 debug.go:45: [GIN-debug] GET    /api/v2/health            --> github.com/open-falcon/falcon-plus/modules/graph/http.configCommonRoutes.func2 (3 handlers)
+2018/10/22 07:00:23 debug.go:45: [GIN-debug] GET    /api/v2/version           --> github.com/open-falcon/falcon-plus/modules/graph/http.configCommonRoutes.func3 (3 handlers)
+2018/10/22 07:00:23 debug.go:45: [GIN-debug] GET    /api/v2/workdir           --> github.com/open-falcon/falcon-plus/modules/graph/http.configCommonRoutes.func4 (3 handlers)
+2018/10/22 07:00:23 debug.go:45: [GIN-debug] GET    /api/v2/config            --> github.com/open-falcon/falcon-plus/modules/graph/http.configCommonRoutes.func5 (3 handlers)
+2018/10/22 07:00:23 debug.go:45: [GIN-debug] POST   /api/v2/config/reload     --> github.com/open-falcon/falcon-plus/modules/graph/http.configCommonRoutes.func6 (3 handlers)
+2018/10/22 07:00:23 debug.go:45: [GIN-debug] GET    /api/v2/stats/graph-queue-size --> github.com/open-falcon/falcon-plus/modules/graph/http.configCommonRoutes.func7 (3 handlers)
+2018/10/22 07:00:23 debug.go:45: [GIN-debug] GET    /counter/all              --> github.com/open-falcon/falcon-plus/modules/graph/http.configProcRoutes.func1 (3 handlers)
+2018/10/22 07:00:23 debug.go:45: [GIN-debug] GET    /statistics/all           --> github.com/open-falcon/falcon-plus/modules/graph/http.configProcRoutes.func2 (3 handlers)
+2018/10/22 07:00:23 debug.go:45: [GIN-debug] GET    /index/updateAll          --> github.com/open-falcon/falcon-plus/modules/graph/http.configIndexRoutes.func1 (3 handlers)
+2018/10/22 07:00:23 debug.go:45: [GIN-debug] GET    /index/updateAll/concurrent --> github.com/open-falcon/falcon-plus/modules/graph/http.configIndexRoutes.func2 (3 handlers)
+2018/10/22 07:00:23 debug.go:45: [GIN-debug] POST   /api/v2/index             --> github.com/open-falcon/falcon-plus/modules/graph/http.configIndexRoutes.func3 (3 handlers)
+2018/10/22 07:00:23 cfg.go:115: g.ParseConfig ok, file /open-falcon/graph/config/cfg.json
+2018/10/22 07:00:23 db.go:40: g.InitDB ok
+2018/10/22 07:00:23 rrdtool.go:69: rrdtool.Start ok
+2018/10/22 07:00:23 main.go:37: 42 register signal notify
+2018/10/22 07:00:23 rpc.go:68: rpc.Start ok, listening on 0.0.0.0:6070

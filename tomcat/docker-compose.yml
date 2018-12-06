@@ -1,0 +1,10 @@
+version: "3"
+services: 
+  tomcat:
+    image: "tomcat:9.0.12-jre11"
+    container_name: "tomcat"
+    ports: 
+      - "8888:8080"
+    restart: "always"
+    volumes: 
+      - "./tomcat/:/usr/local/tomcat"
