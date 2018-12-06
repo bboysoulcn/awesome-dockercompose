@@ -1,9 +1,0 @@
-2018/10/18 14:55:20 cfg.go:104: read config file: /open-falcon/judge/config/cfg.json successfully
-2018/10/18 14:55:20 http.go:74: http listening 0.0.0.0:6081
-2018/10/18 14:55:20 rpc.go:38: rpc listening 0.0.0.0:6080
-2018/10/19 01:38:37 cfg.go:104: read config file: /open-falcon/judge/config/cfg.json successfully
-2018/10/19 01:38:37 rpc.go:38: rpc listening 0.0.0.0:6080
-2018/10/19 01:38:37 http.go:74: http listening 0.0.0.0:6081
-2018/10/22 07:00:26 cfg.go:104: read config file: /open-falcon/judge/config/cfg.json successfully
-2018/10/22 07:00:26 rpc.go:38: rpc listening 0.0.0.0:6080
-2018/10/22 07:00:26 http.go:74: http listening 0.0.0.0:6081
