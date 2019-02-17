@@ -1,0 +1,18 @@
+version: "3"
+services: 
+  nginx:
+    image: "nginx:1.14.2"
+    container_name: "nginx"
+    restart: "always"
+    volumes: 
+      - "nginx-etc:/etc/nginx/"
+      - "nginx-html:/usr/share/nginx/html"
+    ports: 
+      "80:80"
+    networks: 
+      - "nginx"
+volumes: 
+  nginx-etc:
+  nginx-html:
+networks: 
+  nginx:

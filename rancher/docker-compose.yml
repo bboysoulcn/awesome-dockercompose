@@ -1,9 +1,0 @@
-version: "3"
-services: 
-  rancher:
-    image: "rancher/rancher:v2.1.1"
-    container_name: "rancher"
-    ports: 
-      - "80:80"
-      - "43:443"
-    restart: "always"

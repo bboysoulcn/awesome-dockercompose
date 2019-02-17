@@ -1,4 +1,0 @@
-2018-10-29 09:27:07,448 CRIT Supervisor running as root (no user in config file)
-2018-10-29 09:27:07,536 INFO RPC interface 'supervisor' initialized
-2018-10-29 09:27:07,540 CRIT Server 'unix_http_server' running without any HTTP authentication checking
-2018-10-29 09:27:07,541 INFO supervisord started with pid 1

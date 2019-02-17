@@ -1,0 +1,18 @@
+version: "3"
+services: 
+  visualizer:
+    image: "dockersamples/visualizer"
+    container_name: "visualizer"
+    restart: "always"
+    volumes: 
+      - "/var/run/docker.sock:/var/run/docker.sock"
+    ports:
+      - "8080:8080"
+    # deploy in swarm
+    # if you want to deploy visualizer in swarm mode please use 
+    # docker stack deploy -c docker-compose.yaml visualizer
+    # and rm container_name: "visualizer"
+    #deploy:
+    #  placement:
+    #    constraints:
+    #      - node.role == manager
