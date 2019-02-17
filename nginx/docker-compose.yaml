@@ -7,6 +7,7 @@ services:
     volumes: 
       - "nginx-etc:/etc/nginx/"
       - "nginx-html:/usr/share/nginx/html"
+      - "nginx-log:/var/log/nginx/"
     ports: 
       - "80:80"
     networks: 
@@ -14,5 +15,6 @@ services:
 volumes: 
   nginx-etc:
   nginx-html:
+  nginx-log:
 networks: 
   nginx:
