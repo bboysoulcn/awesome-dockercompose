@@ -7,7 +7,8 @@ services:
     volumes: 
       - "nginx-etc:/etc/nginx/"
       - "nginx-html:/usr/share/nginx/html"
-      - "nginx-log:/var/log/nginx/"
+    # 默认nginx的日志输出到stdout，如果你想收集日志请重新配置配置文件
+    #  - "nginx-log:/var/log/nginx/"
     ports: 
       - "80:80"
     networks: 
@@ -15,6 +16,6 @@ services:
 volumes: 
   nginx-etc:
   nginx-html:
-  nginx-log:
+#  nginx-log:
 networks: 
   nginx:

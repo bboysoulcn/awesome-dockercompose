@@ -1,0 +1,24 @@
+version: "3"
+services:
+  gitlab:
+    image: "gitlab/gitlab-ce:11.7.5-ce.0"
+    container_name: "gitlab"
+    restart: "always"
+    ports:
+      - "8081:80"
+      - "4443:443"
+      - "2222:22"
+    networks:
+      - "gitlab-net"
+    volumes:
+      - "gitlab-config:/etc/gitlab"
+      - "gitlab-logs:/var/log/gitlab"
+      - "gitlab-data:/var/opt/gitlab"
+
+volumes:
+  gitlab-config:
+  gitlab-logs:
+  gitlab-data:
+
+networks:
+  gitlab-net:
