@@ -16,6 +16,8 @@ services:
       - "zabbix-db"
     ports: 
       - "10051:10051"
+    extra_hosts:
+      - "mysql.bboysoul.com:10.10.10.200"
 
 
   zabbix-web:
@@ -37,6 +39,8 @@ services:
       - "zabbix-db"
     ports: 
       - "8082:80"
+    #extra_hosts:
+    #  - "mysql.bboysoul.com:10.10.10.200"
     
   zabbix-db:
     image: "mariadb:10.2.22"
