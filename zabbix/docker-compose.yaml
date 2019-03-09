@@ -12,7 +12,7 @@ services:
       #- "MYSQL_DATABASE="
     volumes: 
       - "zabbix-server-data:/var/lib/zabbix/"
-      - "zabbix-server-scripts:/usr/lib/zabbix"
+      - "zabbix-server-scripts:/usr/lib/zabbix/"
     depends_on: 
       - "zabbix-db"
     ports: 
