@@ -6,8 +6,9 @@ services:
     restart: "always"
     ports: 
       - "8081:8081"
+    # 为了可以使用nfs存储
     volumes: 
-      - "nexus-data:/nexus-data"
+      - "./nexus-data:/nexus-data"
 
-volumes: 
-  nexus-data:
+#volumes: 
+#  nexus-data:
