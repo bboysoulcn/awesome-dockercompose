@@ -6,9 +6,12 @@ services:
     restart: "always"
     ports: 
       - "8081:8081"
-    # 为了可以使用nfs存储
     volumes: 
-      - "./nexus-data:/nexus-data"
+      - "nexus-data:/nexus-data"
+      - "nexus:/opt/sonatype/nexus"
+    #environment: 
+    #  - "INSTALL4J_ADD_VM_PARAMS"
 
-#volumes: 
-#  nexus-data:
+volumes: 
+  nexus-data:
+  nexus:
