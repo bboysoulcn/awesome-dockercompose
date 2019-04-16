@@ -1,0 +1,15 @@
+version: "3"
+services: 
+  tomcat:
+    image: "tomcat:8.5.40-jre8-alpine"
+    container_name: "tomcat"
+    restart: "always"
+    ports: 
+      - "8888:8080"
+    volumes: 
+      - "tomcat-data:/usr/local/tomcat"
+
+volumes: 
+  tomcat-data:
+
+  
