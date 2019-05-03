@@ -1,0 +1,20 @@
+version: "3"
+services: 
+  spug:
+    image: "hub.qbangmang.com/spug"
+    container_name: "spug"
+    restart: "always"
+    ports: 
+      - "80:80"
+    #environment: 
+    #  - "MYSQL_DATABASE=spug"
+    #  - "MYSQL_USER=spuguser"
+    #  - "MYSQL_PASSWORD=spugpwd"
+    #  - "REGISTRY_SERVER=hub.qbangmang.com"
+    #  - "REGISTRY_USER=hubuser"
+    #  - "REGISTRY_PASSWORD=hubpwd"
+    volumes: 
+      - "spug:/spug"
+
+volumes: 
+  spug:

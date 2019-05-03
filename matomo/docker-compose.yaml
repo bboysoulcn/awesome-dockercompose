@@ -1,0 +1,25 @@
+version: "3"
+services: 
+  matomo:
+    image: "matomo:3.9.1"
+    container_name: "matomo"
+    restart: "always"
+    ports: 
+      - "9000:9000"
+      - "80:80"
+
+  mariadb:
+    image: "mariadb:10.3.14"
+    container_name: "mariadb"
+    restart: "always"
+    environment: 
+      - "MYSQL_ROOT_PASSWORD=matomo"
+      - "MYSQL_DATABASE=matomo"
+      - "MYSQL_USER=matomo"
+      - "MYSQL_PASSWORD=matomo"
+    ports: 
+      - "3306:3306"
+    volumes: 
+      - "matomo-db:/var/lib/mysql"
+volumes: 
+  matomo-db:

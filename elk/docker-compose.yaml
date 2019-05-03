@@ -1,0 +1,51 @@
+version: "3"
+services: 
+  elasticsearch:
+    image: "elasticsearch:6.7.1"
+    container_name: "elasticsearch"
+    restart: "always"
+    volumes: 
+      - "elasticsearch_data:/usr/share/elasticsearch"
+#vim /etc/sysctl.conf
+#vm.max_map_count=262144
+#sysctl -w vm.max_map_count=262144
+#sysctl -p
+    environment: 
+      - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
+    networks: 
+      - "elk"
+    ports: 
+      - "9200:9200"
+      - "9300:9300"
+
+  kibana:
+    image: "kibana:6.7.1"
+    container_name: "kibana"
+    restart: "always"
+    volumes: 
+      - "kibana:/usr/share/kibana"
+    networks: 
+      - "elk"
+    ports: 
+      - "5601:5601"
+    
+  
+  logstash:
+    image: "logstash:6.7.1"
+    container_name: "logstash"
+    restart: "always"
+    networks: 
+      - "elk"
+    ports: 
+      - "5044:5044"
+      - "9600:9600"
+    volumes: 
+      - "logstash:/usr/share/logstash"
+    
+networks: 
+  elk:
+
+volumes: 
+  elasticsearch_data:
+  logstash:
+  kibana:
