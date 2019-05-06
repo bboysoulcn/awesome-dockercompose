@@ -1,0 +1,14 @@
+version: "3"
+services: 
+  code-server:
+    image: "codercom/code-server:1.939"
+    container_name: "code-server"
+    restart: "always"
+    ports: 
+      - "8443:8443"
+    command: "--allow-http --password=P@ssw0rd123"
+    volumes: 
+      - "code-project:/home/coder/"
+
+volumes: 
+  code-project:
