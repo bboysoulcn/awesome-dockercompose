@@ -3,7 +3,7 @@ services:
   hawkeye:
     image: "daocloud.io/0xbug/hawkeye:master-178808e"
     container_name: "hawkeye"
-    restart: "alwasys"
+    restart: "always"
     ports: 
       - "80:80"
     environment: 
