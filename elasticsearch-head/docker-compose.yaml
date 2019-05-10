@@ -1,0 +1,9 @@
+version: "3"
+services: 
+  elasticsearch-head:
+    image: "mobz/elasticsearch-head:5-alpine"
+    container_name: "elasticsearch-head"
+    restart: "always"
+    ports: 
+      - "9100:9100"
+    

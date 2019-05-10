@@ -9,6 +9,8 @@ services:
     command: "--allow-http --password=P@ssw0rd123"
     volumes: 
       - "code-project:/home/coder/"
+      - "code-file:/home/coder/project/"
 
 volumes: 
   code-project:
+  code-file:

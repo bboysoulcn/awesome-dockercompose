@@ -1,0 +1,26 @@
+version: "3"
+services: 
+  hawkeye:
+    image: "daocloud.io/0xbug/hawkeye:master-178808e"
+    container_name: "hawkeye"
+    restart: "alwasys"
+    ports: 
+      - "80:80"
+    environment: 
+      - "MONGODB_URI=mongodb://root:passwd@mongo:27017"
+
+
+  mongodb:
+    image: "mongo:4.1"
+    container_name: "mongo"
+    restart: "always"
+    environment: 
+      - "MONGO_INITDB_ROOT_USERNAME=root"
+      - "MONGO_INITDB_ROOT_PASSWORD=passwd"
+    volumes: 
+      - "mongodb-db:/data/db"
+    ports: 
+      - "27017:27017"
+
+volumes: 
+  mongodb-db:
