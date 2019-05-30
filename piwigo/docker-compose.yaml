@@ -1,0 +1,13 @@
+version: "3"
+services: 
+  piwigo:
+    image: "mathieuruellan/piwigo:release-2.9.4"
+    container_name: "piwigo"
+    restart: "always"
+    ports: 
+      - "8088:80"
+    volumes: 
+      - "piwigo-data:/home/piwigo/"
+
+volumes: 
+  piwigo-data:

@@ -5,10 +5,11 @@ services:
     container_name: "kong"
     depends_on:
       - "kong-postgres"
+      - "kong-migrations"
     restart: "always"
     environment:
-      - "KONG_ADMIN_ACCESS_LOG=stdout"
-      - "KONG_ADMIN_ERROR_LOG=stderr"
+      - "KONG_ADMIN_ACCESS_LOG=/dev/stdout"
+      - "KONG_ADMIN_ERROR_LOG=/dev/stderr"
       - "KONG_ADMIN_LISTEN=0.0.0.0:8001"
       - "KONG_CASSANDRA_CONTACT_POINTS=db"
       - "KONG_PG_DATABASE=kong"
@@ -16,8 +17,8 @@ services:
       - "KONG_DATABASE=postgres"
       - "KONG_PG_PASSWORD=yourpassword"
       - "KONG_PG_USER=kong"
-      - "KONG_PROXY_ACCESS_LOG=stdout"
-      - "KONG_PROXY_ERROR_LOG/=stderr"
+      - "KONG_PROXY_ACCESS_LOG=/dev/stdout"
+      - "KONG_PROXY_ERROR_LOG=/dev/stderr"
     networks:
       - "kong-net"
     ports:
@@ -64,6 +65,7 @@ services:
     restart: "always"
     depends_on: 
       - "kong-postgres"
+      - "kong-migrations"
       - "kong"
     ports: 
       - "8084:8080"

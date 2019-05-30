@@ -41,6 +41,15 @@ services:
       - "9600:9600"
     volumes: 
       - "logstash:/usr/share/logstash"
+
+  elasticsearch-head:
+    image: "mobz/elasticsearch-head:5-alpine"
+    container_name: "elasticsearch-head"
+    restart: "always"
+    networks: 
+      - "elk"
+    ports: 
+      - "9100:9100"
     
 networks: 
   elk:

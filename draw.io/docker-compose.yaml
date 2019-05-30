@@ -1,0 +1,9 @@
+version: "3"
+services: 
+  drawio:
+    build: "."
+    container_name: "drawio"
+    restart: "always"
+    ports: 
+      - "8080:8080"
+    
