@@ -1,0 +1,17 @@
+version: "3"
+services:
+  gitea:
+    image: "docker.bboysoul.com:5000/gogs/gogs:0.11.86"
+    container_name: "gogs"
+    volumes:
+      - "gogs-data:/data"
+      - "gogs-app:/app"
+      - "/etc/localtime:/etc/localtime:ro"
+    ports:
+      - "8096:3000"
+      - "2224:22"
+    restart: "always"
+
+volumes:
+  gogs-data:
+  gogs-app:

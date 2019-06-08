@@ -1,0 +1,15 @@
+version: "3"
+services: 
+  gitea:
+    image: "gitea/gitea:1.8.2"
+    container_name: "gitea"
+    volumes: 
+      - "gitea-data:/data"
+      - "/etc/localtime:/etc/localtime:ro"
+    ports:
+      - "3000:3000"
+      - "2222:22"
+    restart: "always"
+
+volumes: 
+  gitea-data:
