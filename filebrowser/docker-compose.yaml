@@ -5,12 +5,8 @@ services:
     container_name: "filebrowser"
     restart: "always"
     volumes: 
-      - "filebrowser-json:/.filebrowser.json"
-      - "filebrowser-db:/database.db"
+      - "./.filebrowser.json:/.filebrowser.json"
+      - "./database.db:/database.db"
       - "/data:/srv"
     ports: 
       - "80:80"
-
-volumes: 
-  filebrowser-db:
-  filebrowser-json:
