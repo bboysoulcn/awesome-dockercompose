@@ -1,0 +1,16 @@
+version: "3"
+services: 
+  filebrowser:
+    image: "filebrowser/filebrowser:v2.0.12"
+    container_name: "filebrowser"
+    restart: "always"
+    volumes: 
+      - "filebrowser-json:/.filebrowser.json"
+      - "filebrowser-db:/database.db"
+      - "/data:/srv"
+    ports: 
+      - "80:80"
+
+volumes: 
+  filebrowser-db:
+  filebrowser-json:

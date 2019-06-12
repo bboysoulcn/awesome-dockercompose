@@ -1,6 +1,6 @@
 FROM node:dubnium-slim
-RUN apt update && \
-    apt install git python make -y && \
+RUN apt-get update && \
+    apt-get install git python make -y && \
     mkdir yapi && \
     cd yapi && \
     git clone https://github.com/YMFE/yapi.git vendors
