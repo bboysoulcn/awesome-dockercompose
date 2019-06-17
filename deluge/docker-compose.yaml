@@ -1,8 +1,14 @@
 version: "3"
-services: 
+services:
   deluge:
     build: "."
     container_name: "deluge"
     restart: "always"
-    ports: 
-      - "80:80"
+    ports:
+      - "8099:80"
+    volumes:
+      - "/data/disk1/media/down:/data"
+      - "deluge-data:/root/.config/deluge"
+
+volumes:
+  deluge-data:

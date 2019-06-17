@@ -1,0 +1,11 @@
+version: "3"
+services: 
+  webui-aria2:
+    build: "."
+    container_name: "webui-aria2"
+    restart: "always"
+    ports: 
+      - "6800:6800"
+      - "9100:8080"
+    volumes: 
+      - "/Downloads:/data"
