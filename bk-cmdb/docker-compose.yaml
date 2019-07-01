@@ -1,0 +1,8 @@
+version: "3"
+services: 
+  bk-cmdb:
+    image: "ccr.ccs.tencentyun.com/bk.io/cmdb-standalone:latest"
+    container_name: "bk-cmdb"
+    ports: 
+      - "8081:8090"
+      

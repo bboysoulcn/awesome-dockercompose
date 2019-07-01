@@ -1,0 +1,19 @@
+version: "3"
+services: 
+  kms:
+    image: "ekonprof18/pykms:py3-kms"
+    container_name: "kms-server"
+    restart: "unless-stopped"
+    ports: 
+      - "8080:8080"
+      - "1688:1688"
+    environment: 
+      - "IP=0.0.0.0"
+      - "PORT=1688"
+      - "SQLITE=true"
+      - "HWID=random"
+      - "LOGLEVEL=INFO"
+      - "LOGFILE=/var/log/py3-kms.log"
+    volumes: 
+      - "/etc/localtime:/etc/localtime:ro"
+      - "/var/log:/var/log:rw"
