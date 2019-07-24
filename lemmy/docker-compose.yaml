@@ -1,0 +1,27 @@
+version: '3'
+services:
+  db:
+    image: postgres:9.6-alpine
+    restart: always
+    container_name: "lemmy"
+    environment:
+      POSTGRES_USER: bboysoul
+      POSTGRES_PASSWORD: bboysoul
+      POSTGRES_DB: lemmy
+    volumes:
+      - "postgresql-data:/var/lib/postgresql/data"
+  lemmy:
+    image: dessalines/lemmy:0.0.5
+    ports:
+      - "8100:8536"
+    environment:
+      LEMMY_FRONT_END_DIR: /app/dist
+      DATABASE_URL: postgres://bboysoul:bboysoul@db:5432/lemmy
+      JWT_SECRET: bboysoul
+      HOSTNAME: lemmy.frp.bboysoul.com
+    restart: always
+    depends_on:
+      - db
+
+volumes:
+  postgresql-data:
