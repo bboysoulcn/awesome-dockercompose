@@ -1,0 +1,9 @@
+version: "3"
+services: 
+  searx:
+    image: "wonderfall/searx:latest"
+    container_name: "searx"
+    restart: "always"
+    ports: 
+      - "8101:8888"
+    
