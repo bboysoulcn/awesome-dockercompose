@@ -1,0 +1,15 @@
+version: "3"
+services: 
+  osmedeus:
+    image: "mablanco/osmedeus"
+    container_name: "osmedeus"
+    restart: "always"
+    volumes: 
+      - "osmedeus_workspaces:/home/Osmedeus/workspaces"
+    ports: 
+      - "5000:5000"
+    network_mode: "host"
+
+volumes: 
+  osmedeus_workspaces:
+  
