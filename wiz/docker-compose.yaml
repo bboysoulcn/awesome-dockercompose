@@ -1,0 +1,15 @@
+version: "3"
+services: 
+  wiz:
+    image: "wiznote/wizserver"
+    container_name: "wiz"
+    volumes: 
+      - "wizdata:/wiz/storage"
+      - "/etc/localtime:/etc/localtime"
+    ports: 
+      - "80:80"
+    environment: 
+      - "SEARCH=true"
+
+volumes: 
+  wizdata:
