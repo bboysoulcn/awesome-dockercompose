@@ -1,0 +1,13 @@
+version: "3"
+services: 
+  drone:
+    image: "drone/drone:1.2.3"
+    container_name: "drone"
+    restart: "always"
+    volumes: 
+      - "/var/lib/drone:/data"
+    env_file: 
+      - "drone.env" 
+    ports: 
+      - "80:80"
+      - "443:443"

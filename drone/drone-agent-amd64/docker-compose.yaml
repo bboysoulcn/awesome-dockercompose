@@ -1,0 +1,12 @@
+version: "3"
+services: 
+  drone:
+    image: "drone/agent:1"
+    container_name: "drone-agent-amd64"
+    restart: "always"
+    ports: 
+      - "3000:3000"
+    volumes: 
+      - "/var/run/docker.sock:/var/run/docker.sock"
+    env_file: 
+      - "drone.env"    
