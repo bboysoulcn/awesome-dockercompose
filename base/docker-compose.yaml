@@ -1,0 +1,10 @@
+version: "3"
+services: 
+  base:
+    image: 
+    container_name: 
+    restart: "always"
+    volumes: 
+      - "/etc/localtime:/etc/localtime"
+    ports: 
+    environment: 
