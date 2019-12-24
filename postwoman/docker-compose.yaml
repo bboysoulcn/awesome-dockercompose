@@ -1,0 +1,10 @@
+version: "3"
+services: 
+  postwoman:
+    image: "liyasthomas/postwoman"
+    container_name: "postwoman" 
+    restart: "always"
+    # volumes: 
+    #   - "/etc/localtime:/etc/localtime"
+    ports: 
+      - "3000:3000"
