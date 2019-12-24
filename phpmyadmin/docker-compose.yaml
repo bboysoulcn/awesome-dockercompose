@@ -1,0 +1,16 @@
+version: "3"
+services: 
+  phpmyadmin:
+    image: "phpmyadmin/phpmyadmin:4.9"
+    container_name: "phpmyadmin"
+    restart: "always"
+    volumes: 
+      - "/etc/localtime:/etc/localtime"
+    ports: 
+       - "8080:80"
+    environment: 
+       - "PMA_HOST=" # mysql hosts
+       - "PMA_PORT=" # mysql port
+       - "PMA_USER=" # mysql user
+       - "PMA_PASSWORD=" # mysql password
+       - "HIDE_PHP_VERSION=true"
