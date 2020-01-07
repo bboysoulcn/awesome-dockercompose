@@ -11,14 +11,16 @@ services:
     volumes: 
       - "mariadb-data:/var/lib/mysql"
       - "mariadb-etc:/etc/mysql/conf.d"
+      - "/etc/localtime:/etc/localtime"
 
-  adminer:
-    image: "adminer:4.7.1"
-    container_name: "adminer"
-    restart: "always"
-    ports: 
-      - "8080:8080"
-      - "9000:9000"
+
+  # adminer:
+  #   image: "adminer:4.7.1"
+  #   container_name: "adminer"
+  #   restart: "always"
+  #   ports: 
+  #     - "8080:8080"
+  #     - "9000:9000"
     
   
 volumes: 
