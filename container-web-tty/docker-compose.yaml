@@ -1,0 +1,16 @@
+version: "3"
+services: 
+  container-web-tty:
+    image: "wrfly/container-web-tty:latest"
+    container_name: "container-web-tty"
+    restart: "always"
+    volumes: 
+      - "/etc/localtime:/etc/localtime"
+      - "/var/run/docker.sock:/var/run/docker.sock"
+    ports: 
+      - "8080:8080"
+    #environment: 
+    #  - "WEB_TTY_GRPC_PORT"
+    #  - "WEB_TTY_GRPC_AUTH"
+    #  - "WEB_TTY_GRPC_SERVERS"
+#https://github.com/wrfly/container-web-tty/blob/master/README.ZH.md
