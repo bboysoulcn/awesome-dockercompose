@@ -1,0 +1,20 @@
+version: '3'
+services:
+  yapi-web:
+    image: "jayfong/yapi:latest"
+    container_name: "yapi-web"
+    ports:
+      - "80:3000"
+    environment:
+      - "YAPI_ADMIN_ACCOUNT=a@a.com"
+      - "YAPI_ADMIN_PASSWORD=passwd"
+      - "YAPI_CLOSE_REGISTER=false"
+      - "YAPI_DB_SERVERNAME=1.1.1.1"
+      - "YAPI_DB_PORT=27017"
+      - "YAPI_DB_DATABASE=yapi"
+      - "YAPI_MAIL_ENABLE=false"
+      - "YAPI_LDAP_LOGIN_ENABLE=false"
+      - "YAPI_PLUGINS=[]"
+    volumes:
+      - "/etc/localtime:/etc/localtime"
+    restart: "always"

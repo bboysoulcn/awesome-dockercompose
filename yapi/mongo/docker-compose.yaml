@@ -1,0 +1,11 @@
+version: "3"
+services:
+  mongodb:
+    image: "mongo:4.2.2"
+    container_name: "mongo"
+    restart: "always"
+    volumes:
+      - "./mongodb-db:/data/db"
+      - "/etc/localtime:/etc/localtime"
+    ports:
+      - "27017:27017"
