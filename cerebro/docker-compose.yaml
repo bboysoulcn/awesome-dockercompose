@@ -1,0 +1,10 @@
+version: "3"
+services: 
+  cerebro:
+    image: "lmenezes/cerebro:0.8.5"
+    container_name: "cerebro"
+    restart: "always"
+    volumes: 
+      - "/etc/localtime:/etc/localtime"
+    ports: 
+      - "9000:9000"
