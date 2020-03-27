@@ -1,0 +1,17 @@
+version: "3"
+services: 
+  runner: 
+    image: "drone/drone-agent:1.6.2"
+    container_name: "drone-runner"
+    restart: "always"
+    volumes: 
+      - "/etc/localtime:/etc/localtime"
+      - "/var/run/docker.sock:/var/run/docker.sock"
+    ports:
+      - "3000:3000" 
+    environment:
+      - "DRONE_RPC_PROTO=http"
+      - "DRONE_RPC_HOST=drone_drone"
+      - "DRONE_RPC_SECRET=secret"
+      - "DRONE_RUNNER_CAPACITY=2"
+      - "DRONE_RUNNER_NAME=drone-agent-4"
