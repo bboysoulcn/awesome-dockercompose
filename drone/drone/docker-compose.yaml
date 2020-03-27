@@ -1,13 +1,22 @@
 version: "3"
 services: 
   drone:
-    image: "drone/drone:1.2.3"
-    container_name: "drone"
+    image: "drone/drone:1.6.5"
+    container_name: "drone-server"
     restart: "always"
     volumes: 
-      - "/var/lib/drone:/data"
-    env_file: 
-      - "drone.env" 
+      - "/etc/localtime:/etc/localtime"
+      - "drone-data:/data"
     ports: 
       - "80:80"
-      - "443:443"
+    environment: 
+      - "DRONE_AGENTS_ENABLED=true"
+      - "DRONE_GITLAB_SERVER=https://gitlab.example.cn"
+      - "DRONE_GITLAB_CLIENT_ID=client_id"
+      - "DRONE_GITLAB_CLIENT_SECRET=client_secret"
+      - "DRONE_RPC_SECRET=secret"
+      - "DRONE_SERVER_HOST=drone.example.cn"
+      - "DRONE_SERVER_PROTO=https"
+
+volumes:
+  drone-data:
