@@ -9,6 +9,7 @@ services:
       - "MONGO_INITDB_ROOT_PASSWORD=passwd"
     volumes: 
       - "mongodb-db:/data/db"
+      - "/etc/localtime:/etc/localtime"
     ports: 
       - "27017:27017"
   
