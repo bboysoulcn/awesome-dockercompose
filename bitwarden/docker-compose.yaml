@@ -1,0 +1,13 @@
+version: "3"
+services: 
+  bitwarden:
+    image: "bitwardenrs/server:alpine"
+    container_name: "bitwarden"
+    restart: "always"
+    volumes: 
+      - "/etc/localtime:/etc/localtime"
+      - "./bitwardenrs-data:/data/"
+    ports: 
+      - "80:80"
+
+
