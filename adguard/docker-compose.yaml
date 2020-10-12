@@ -1,0 +1,20 @@
+version: "3"
+services: 
+  adguard:
+    image: "adguard/adguardhome:v0.103.3"
+    container_name: "adguard"
+    restart: "always"
+    volumes: 
+      - "/etc/localtime:/etc/localtime"
+      - "./workdir:/opt/adguardhome/work"
+      - "./confdir:/opt/adguardhome/conf "
+    ports: 
+        - "53:53/tcp"
+        - "53:53/udp"
+        - "67:67/udp"
+        - "68:68/tcp"
+        - "68:68/udp"
+        - "80:80/tcp"
+        - "443:443/tcp"
+        - "853:853/tcp"
+        - "3000:3000/tcp"

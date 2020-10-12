@@ -1,0 +1,10 @@
+version: "3"
+services: 
+  docker-doc:
+    image: "bboysoul/docker-doc:latest"
+    container_name: "docker-doc"
+    restart: "always"
+    volumes: 
+      - "/etc/localtime:/etc/localtime"
+    ports: 
+      - "8083:4000"

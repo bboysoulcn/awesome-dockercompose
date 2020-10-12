@@ -1,0 +1,11 @@
+version: "3"
+services: 
+  k8s-doc:
+    image: "bboysoul/k8s-doc:latest"
+    container_name: "k8s-doc"
+    restart: "always"
+    volumes: 
+      - "/etc/localtime:/etc/localtime"
+    ports: 
+      - "1313:1313"
+    command: "hugo server --buildFuture --bind 0.0.0.0 --destination /tmp/hugo --cleanDestinationDir"

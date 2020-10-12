@@ -1,0 +1,10 @@
+version: "3"
+services: 
+  docker-getting-started:
+    image: "docker/getting-started:latest"
+    container_name: "docker-getting-started"
+    restart: "always"
+    volumes: 
+      - "/etc/localtime:/etc/localtime"
+    ports: 
+        - "8081:80"
