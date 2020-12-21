@@ -1,0 +1,14 @@
+version: "3"
+services: 
+  influxdb:
+    image: "influxdb:1.8.3"
+    container_name: "influxdb"
+    restart: "always"
+    volumes: 
+      - "/etc/localtime:/etc/localtime"
+      - "./influxdb:/var/lib/influxdb"
+    ports: 
+      - "8086:8086"
+      - "2003:2003"
+    environment: 
+      - "INFLUXDB_GRAPHITE_ENABLED=true"
