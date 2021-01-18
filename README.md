@@ -6,5 +6,4 @@
 
 `/var/lib/docker/volumes`
 
-*Email: bboysoulcn@gmail.com*
-*Powered by Bboysoul*
+*Email: YmJveXNvdWxjbkBnbWFpbC5jb20=*
