@@ -1,0 +1,32 @@
+version: "3"
+services:
+  jobmanager:
+    image: "flink:1.5.1-alpine"
+    restart: "always"
+    container_name: "flink"
+    expose:
+      - "6123"
+    ports:
+      - "8081:8081"
+    volumes: 
+      - "/etc/localtime:/etc/localtime"
+    command: jobmanager
+    environment:
+      - JOB_MANAGER_RPC_ADDRESS=jobmanager
+
+  taskmanager:
+    restart: "always"
+    container_name: "flink"
+    image: "flink:1.5.1-alpine"
+    expose:
+      - "6121"
+      - "6122"
+    volumes: 
+      - "/etc/localtime:/etc/localtime"
+    depends_on:
+      - jobmanager
+    command: taskmanager
+    links:
+      - "jobmanager:jobmanager"
+    environment:
+      - JOB_MANAGER_RPC_ADDRESS=jobmanager
