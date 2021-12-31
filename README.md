@@ -2,8 +2,13 @@
 
 写的不规范希望大家可以指正
 
-所有的数据都是采用volumes的形式保存，如果你要做备份请备份下面这个目录就可以了
+同时推荐
 
-`/var/lib/docker/volumes`
+`https://github.com/docker/awesome-compose`
 
 *Email: YmJveXNvdWxjbkBnbWFpbC5jb20=*
+
+### 20211231更新
+
+写在2021年最后一天，感谢大家的star和各种关注，好久没更新了，之后会随缘更新，需要啥的可以在issues里面battle
+
