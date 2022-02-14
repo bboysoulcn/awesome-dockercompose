@@ -1,0 +1,14 @@
+version: "3"
+services: 
+  bilibili-helper:
+    image: "superng6/bilibili-helper:arm32-latest"
+    container_name: "bilibili-helper"
+    restart: "always"
+    volumes: 
+      - "/etc/localtime:/etc/localtime"
+      - "./config:/config"
+    environment: 
+      - PUID=1026
+      - PGID=100
+      - TZ=Asia/Shanghai
+      - CRON=random
