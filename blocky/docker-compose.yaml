@@ -1,0 +1,12 @@
+version: "2.1"
+services:
+  blocky:
+    image: ghcr.io/0xerr0r/blocky:v0.21
+    container_name: blocky
+    restart: always
+    ports:
+      - 4000:4000
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+      - ./config.yml:/app/config.yml
+      - ./logs:/logs

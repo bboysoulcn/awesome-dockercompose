@@ -1,0 +1,28 @@
+upstream:
+  default:
+    - 8.8.8.8
+upstreamTimeout: 3s
+ports:
+  dns: 53
+  http: 4000
+log:
+  level: info
+  format: json
+  timestamp: true
+caching:
+  minTime: 1h
+  maxTime: 2h
+  prefetching: true
+  maxItemsCount: 0
+prometheus:
+  enable: true
+  path: /metrics
+filtering:
+  queryTypes:
+    - AAAA
+queryLog:
+  type: csv
+  target: /logs
+  logRetentionDays: 0
+ede:
+  enable: true

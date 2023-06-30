@@ -1,0 +1,15 @@
+version: "3"
+services:
+  headscale:
+    image: "headscale/headscale:0.22.1"
+    container_name: "headscale"
+    restart: "always"
+    volumes:
+      - "/etc/localtime:/etc/localtime"
+      - "./config:/etc/headscale/"
+    command:
+      - "headscale"
+      - "serve"
+    ports:
+      - "8083:8080"
+      - "9090:9090"
