@@ -1,3 +1,9 @@
+### CI 状态
+
+![Gitleaks](https://github.com/bboysoulcn/awesome-dockercompose/actions/workflows/gitleaks.yml/badge.svg)
+
+
+
 ### 这是我一些常用的compose文件
 
 写的不规范希望大家可以指正
