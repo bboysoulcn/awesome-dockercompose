@@ -1,0 +1,15 @@
+version: "3"
+services:
+  freshrss:
+    image: freshrss/freshrss:1.23.1
+    container_name: freshrss
+    restart: "always"
+    volumes:
+      - "/etc/localtime:/etc/localtime"
+      - "./extensions:/var/www/FreshRSS/extensions"
+      - "./data:/var/www/FreshRSS/data"
+    ports:
+      - "8081:80"
+    environment:
+      - "TZ=Asia/Shanghai"
+      - "CRON_MIN=1,31"
