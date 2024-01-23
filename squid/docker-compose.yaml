@@ -1,0 +1,10 @@
+services:
+  squid:
+    container_name: squid
+    ports:
+      - 3128:3128
+    volumes:
+      - ./logs:/var/log/squid
+      - ./data:/var/spool/squid
+      - ./squid.conf:/etc/squid/squid.conf
+    image: ubuntu/squid:5.2-22.04_beta
