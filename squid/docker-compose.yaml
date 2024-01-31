@@ -3,6 +3,7 @@ services:
     container_name: squid
     ports:
       - 3128:3128
+    restart: always
     volumes:
       - ./logs:/var/log/squid
       - ./data:/var/spool/squid
