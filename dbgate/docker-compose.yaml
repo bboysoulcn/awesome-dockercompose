@@ -1,0 +1,11 @@
+version: '3'
+services:
+  dbgate:
+    image: dbgate/dbgate:5.2.7
+    container_name: dbgate
+    restart: always
+    ports:
+      - 8088:3000
+    volumes:
+      - ./dbgate-data:/root/.dbgate
+      - "/etc/localtime:/etc/localtime"

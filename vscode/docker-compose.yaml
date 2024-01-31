@@ -1,0 +1,7 @@
+services:
+  openvscode-server:
+    ports:
+      - 3000:3000
+    volumes:
+      - ./data:/home/workspace:cached
+    image: gitpod/openvscode-server

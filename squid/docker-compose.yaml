@@ -8,4 +8,5 @@ services:
       - ./logs:/var/log/squid
       - ./data:/var/spool/squid
       - ./squid.conf:/etc/squid/squid.conf
+      - /etc/localtime:/etc/localtime
     image: ubuntu/squid:5.2-22.04_beta
